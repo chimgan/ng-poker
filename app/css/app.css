@@ -1,6 +1,75 @@
 /* app css stylesheet */
-
-body {
-  padding-top: 20px;
+html {
+  background: #ffe;
+  text-align: center;
 }
 
+body {
+  padding-top: 30px;
+}
+
+small{
+  font-size:12px;
+  color: #666;
+}
+
+.skewed {
+  display: inline-block;
+  font: 2em/1 impact, sans-serif;
+  margin-top: 1em;
+  position: relative;
+  -webkit-transform: rotate(-10deg) skew(-10deg, 0);
+  -moz-transform: rotate(-10deg) skew(-10deg, 0);
+  -ms-transform: rotate(-10deg) skew(-10deg, 0);
+  -o-transform: rotate(-10deg) skew(-10deg, 0);
+  transform: rotate(-10deg) skew(-10deg, 0);
+}
+.skewed:after,
+.skewed:before {
+  background: #666;
+  box-shadow: inset 0 0 0 .5em #666,
+  inset 0 .7em 0 #666,
+  inset 0 .9em 0 #888,
+  inset 0 1.4em 0 #666,
+  inset 0 1.6em 0 #888,
+  inset 0 2.1em 0 #666,
+  inset 0 2.3em 0 #888,
+  inset 0 2.5em 0 #666;
+  content: '';
+  height: 3em;
+  position: absolute;
+  top: 0em;
+  width: 3.5em;
+  z-index: -1;
+}
+.skewed:after {
+  border-radius: .25em 0 0 .25em;
+  left: -2.5em;
+}
+.skewed:before {
+  border-radius: 0 .25em .25em 0;
+  right: -2.5em;
+}
+.skewed span {
+  background: #666;
+  box-shadow: 0 0 0 .2em #ffe;
+  color: #ffe;
+  padding: 1em;
+  position: relative;
+  text-shadow: 1px 2px 0 #666,
+  2px 3px 0 #888;
+  text-transform: uppercase;
+}
+
+.centered {
+  width:425px;
+  margin:auto;
+  margin-top: 2em;
+}
+
+#navlist li
+{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}

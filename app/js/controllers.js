@@ -10,7 +10,7 @@ pokerControllers.controller('PokerHomeCtrl', ['$scope',
     $scope.game = 'Poker';
   }]);
 
-pokerControllers.controller('PokerRoomCtrl', ['$scope',
-  function($scope) {
-    $scope.cards = [2,3,4,5,6];
+pokerControllers.controller('PokerRoomCtrl', ['$scope', 'pokerConfig',
+  function($scope, pokerConfig) {
+    alert(pokerConfig.cards);
   }]);
