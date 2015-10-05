@@ -13,6 +13,11 @@ small{
   color: #666;
 }
 
+.card {
+  width: 150px;
+  height: 220px;
+}
+
 .skewed {
   display: inline-block;
   font: 2em/1 impact, sans-serif;

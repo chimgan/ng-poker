@@ -12,5 +12,22 @@ pokerControllers.controller('PokerHomeCtrl', ['$scope',
 
 pokerControllers.controller('PokerRoomCtrl', ['$scope', 'pokerConfig',
   function($scope, pokerConfig) {
-    alert(pokerConfig.cards);
+
+    $scope.reset = function() {
+      $scope.shuffleCards = Shuffle(pokerConfig.cardsArr);
+      $scope.tableCards = [];
+      for (var i=0; i<3; i++) {
+        $scope.tableCards.push(pokerConfig.imagePath + $scope.shuffleCards.pop() + pokerConfig.imageExt);
+      }
+      $scope.tableCards.push(pokerConfig.emptyCard, pokerConfig.emptyCard);
+      console.log($scope.tableCards);
+    };
+
+    $scope.reset();
+
   }]);
+
+function Shuffle(o) {
+  for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
+};

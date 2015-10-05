@@ -2,10 +2,10 @@
 <div><span><br/><br/><br/><br/><br/><br/><br/><br/><br/></span></div>
 <div>
     <ul id="navlist">
-        <li><a href="#">Item one</a></li>
-        <li><a href="#">Item two</a></li>
-        <li><a href="#">Item three</a></li>
-        <li><a href="#">Item four</a></li>
-        <li><a href="#">Item five</a></li>
+        <li ng-repeat="card in tableCards track by $index"><a href="#"><img class="card" ng-src="{{card}}"></a></li>
     </ul>
+</div>
+
+<div>
+    <button ng-click="reset()">New game</button>
 </div>
