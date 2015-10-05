@@ -24,9 +24,9 @@ pokerApp.config(['$routeProvider',
   }]);
 
 pokerApp.constant("pokerConfig", {
-  "emptyCard": "./img/empty.jpg",
-  "pokerTable": "./img/table.jpg",
-  "pokerDealer": "./img/dealer.jpg",
+  "emptyCard": "empty",
+  "pokerTable": "./img/table.png",
+  "pokerDealer": "./img/dealer.png",
   "imagePath": "./img/",
   "imageExt": ".png",
   "cardvals": ['2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a'],
