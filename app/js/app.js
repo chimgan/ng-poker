@@ -4,7 +4,8 @@
 
 var pokerApp = angular.module('ngPoker', [
   'ngRoute',
-  'pokerControllers'
+  'pokerControllers',
+  'pokerDirectives',
 ]);
 
 pokerApp.config(['$routeProvider',

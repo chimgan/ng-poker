@@ -23,6 +23,7 @@ pokerControllers.controller('PokerRoomCtrl', ['$scope', 'pokerConfig',
         $scope.tableCards.push($scope.shuffleCards.pop());
       }
       $scope.tableCards.push(pokerConfig.emptyCard, pokerConfig.emptyCard);
+      //console.log($scope.tableCards.length);
     };
 
     $scope.next = function() {
@@ -35,7 +36,7 @@ pokerControllers.controller('PokerRoomCtrl', ['$scope', 'pokerConfig',
           alert('finish game');
         }
       }
-      console.log($scope.tableCards);
+      //console.log($scope.tableCards);
     }
 
     $scope.reset();
